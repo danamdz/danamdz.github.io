@@ -1,0 +1,354 @@
+header{
+    background: url(imagenes/bg.png);
+    padding: 5px 0px;
+}
+
+.logo{
+    width: 30%;
+}
+
+.home{
+    margin: 10px 200px;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.productos{
+    width: 950px;
+    margin: 10px 250px;
+    padding: 40px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    background: #CCCCCC;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.productos li img{
+    width: 200px;
+    margin-top: 10px;
+}
+
+.producto-descripcion{
+    font-size: 18pz;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.login{
+    background-color:lightpink;
+}
+
+/* Estilo para el formulario de editar platillo */
+
+#menu{
+    margin: 10px 450px;
+    text-align: center;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color:lightpink;
+    padding: 1%;
+}
+
+#agregarPlato h2{
+    text-align: center;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color:lightpink;
+    padding: 1%;
+}
+
+#formAgregarPlato{
+    font-size: 15px;
+    font-weight: bold;
+}
+#agregarPlato {
+    font-family: sans-serif;
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#agregarPalto h2 {
+    color: #333; 
+    margin-bottom: 15px; 
+}
+
+#agregarPlato label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+#agregarPlato input[type="text"],
+#agregarPlato input[type="file"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 3px;
+}
+
+#agregarPlato input[type="submit"] {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 3px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+#agregarPlato input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+
+
+.slider{
+    font-family:Verdana;
+    background-color:lightpink;
+    padding: 1%;
+}
+
+.slider h2{
+    margin: 10px 250px;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color:lightpink;
+    padding: 1%;
+}
+
+#agregarGato h2{
+    text-align: center;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color:lightpink;
+    padding: 1%;
+}
+
+#formAgregarGato{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.video{
+
+    margin: 10px 350px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.png);
+    padding: 40px;
+}
+
+footer img{
+    width: 200px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; 
+    margin: 50px 250px;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 100%; 
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .navigation img {
+    width: 40px; 
+    height: auto;
+    cursor: pointer;
+    outline: none;
+  }
+  
+
+
+  /* Estilo para la sección de agregar gato */
+#agregarGato {
+    font-family: sans-serif;
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    margin: 20px 0;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#agregarGato h2 {
+    color: #333; 
+    margin-bottom: 15px; 
+}
+
+#agregarGato label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+#agregarGato input[type="text"],
+#agregarGato input[type="file"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 3px; 
+}
+
+#agregarGato input[type="submit"] {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 3px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+#agregarGato input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+/*Estilo para el formulario de aceptar o negar adopción */
+
+#formVerAdopcion {
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#formVerAdopcion h2 {
+    color: #333; 
+    margin-bottom: 15px; 
+}
+
+#formVerAdopcion label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+#formVerAdopcion input[type="text"],
+#formVerAdopcion input[type="file"],
+#formVerAdopcion select {
+    width: 20%; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 3px; 
+}
+
+#formVerAdopcion input[type="submit"] {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 3px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+#formVerAdopcion input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+#verAdopcion h2{
+    text-align: center;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color:lightpink;
+    padding: 1%;
+
+}
+

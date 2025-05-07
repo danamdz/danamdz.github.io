@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+
+            <div class="caja"> 
+            <h1><img class="logo" src="imagenes/logof.png" alt="Logo de michicafe"></h1>
+                <nav>
+                    <ul> 
+                        <li><a href="gatitos.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="admin.html">Editar Michi información</a></li>
+                    </ul>
+        
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+
+               <h2 id="menu">Menú</h2> 
+               <section id="agregarPlato">
+                <h2 clas="menu">Agregar Platillo</h2>
+                <form id="formAgregarPlato">
+                    <label for="nombrePlatillo">Nombre del Platillo:</label>
+                    <input type="text" id="nombrePlatillo" name="nombrePlatillo" required>
+
+                    <label for="DescPlato">Agregar descripción del platillo:</label>
+                    <input type="text" id="DescPlato" name="DescPlato" required>
+                    
+                    <label for="imagenPlato">Imagen del platillo:</label>
+                    <input type="file" id="imagenPlato" name="imagenPlato" accept="image/*" required>
+                    
+                    <input type="submit" value="Agregar Platillo">
+                </form>
+            </section>
+
+        
+              <!-- Agrega este bloque de código dentro de la etiqueta <main> en admin.html -->
+            <section id="agregarGato">
+                <h2>Agregar Gato</h2>
+                <form id="formAgregarGato">
+                    <label for="nombreGato">Nombre del Gato:</label>
+                    <input type="text" id="nombreGato" name="nombreGato" required>
+
+                    <label for="EdadGato">Edad del Gato:</label>
+                    <input type="text" id="EdadGato" name="EdadGato" required>
+
+                    <label for="SexoGato">Sexo del Gato:</label>
+                    <input type="text" id="SexoGato" name="SexoGato" required>
+                    
+                    <label for="imagenGato">Imagen del Gato:</label>
+                    <input type="file" id="imagenGato" name="imagenGato" accept="image/*" required>
+                    
+                    <input type="submit" value="Agregar Gato">
+                </form>
+            </section>
+
+            <section id="verAdopcion">
+                <h2>Solicitudes de adopción</h2>
+                <!--Display de la base de datos de las solicitudes de adopción-->
+                <form id="formVerAdopcion">
+
+                    <fieldset>
+                        <select>
+                            <option>Aceptar solicitud</option>
+                            <option>Negar solicitud</option>
+                        </select>
+                    </fieldset>
+                    
+                    <input type="submit" value="Enviar respuesta">
+                </form>
+            </section>
+              
+        </main>
+
+        <footer>
+            <img src="imagenes/logof.png" alt="Logo del michicafe">
+            <p class="copyright">© Copyright Michicafé - 2024</p>
+        </footer>
+
+        <script>
+            // Obtener referencias a los elementos del slider
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+            const slides = document.querySelector('.slides');
+            const slideItems = document.querySelectorAll('.slide'); // Obtener todos los slides
+
+            let currentIndex = 0;
+            const totalSlides = slideItems.length; // Obtener la cantidad total de slides
+
+            // Función para mostrar un slide específico
+            function showSlide(index) {
+            const slideWidth = slideItems[0].offsetWidth; // Usar el ancho del primer slide para calcular el desplazamiento
+            slides.style.transform = `translateX(-${index * slideWidth}px)`; // Mover los slides horizontalmente
+            }
+
+            // Event listener para el botón "Anterior"
+            prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1; // Ir al slide anterior
+            showSlide(currentIndex); // Mostrar el slide actualizado
+            });
+
+            // Event listener para el botón "Siguiente"
+            nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1; // Ir al siguiente slide
+            showSlide(currentIndex); // Mostrar el slide actualizado
+            });
+
+        </script>
+
+        <script>
+                    
+            document.getElementById('formAgregarGato').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+                const formData = new FormData(event.target); // Recoger los datos del formulario
+
+                // Aquí asumimos que tienes un endpoint en tu servidor que maneja la adición de gatos
+                // Por ejemplo, podría ser algo como '/api/gatos/agregar'
+                fetch('/api/gatos/agregar', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Gato agregado con éxito:', data);
+                    // Aquí puedes agregar código para actualizar la interfaz de usuario, como mostrar un mensaje de éxito
+                })
+                .catch(error => {
+                    console.error('Error al agregar el gato:', error);
+                    // Aquí puedes agregar código para manejar errores, como mostrar un mensaje de error
+                });
+            });
+        </script>
+
+        <script>
+            document.getElementById('formAgregarPlato').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    const formData = new FormData(event.target); // Recoger los datos del formulario
+
+    // Aquí asumimos que tienes un endpoint en tu servidor que maneja la adición de platillos
+    // Por ejemplo, podría ser algo como '/api/platillos/agregar'
+    fetch('/api/platillos/agregar', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Platillo agregado con éxito:', data);
+        // Aquí puedes agregar código para actualizar la interfaz de usuario, como mostrar un mensaje de éxito
+    })
+    .catch(error => {
+        console.error('Error al agregar el platillo:', error);
+        // Aquí puedes agregar código para manejar errores, como mostrar un mensaje de error
+    });
+});
+        </script>
+    </body>
+    </html>
